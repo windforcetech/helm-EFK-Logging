@@ -3,20 +3,22 @@ helm charts to create EFK (Elasticsearch, Fluentd, and Kibana) stack in kubernet
 
 ## Installation
 
-step 1:
+Step 1:
 clone the repository:
 ```
-git clone https://github.com/prameswar/efk-helm.git
-```
+git git@github.com:dhiruLeo/helm-EFK-Logging.git
 
-step 2:
+```
+Step 2:
 Install helm charts:
 ```
+Step 3:
 cd efk-helm
 helm install fluentd
 helm install elasticsearch
 helm install kibana
 
+```
 ## Elasticsearch, Fluentd, and Kibana
 
 To setup EFK Stack from single YAML File  
@@ -24,6 +26,5 @@ i.e. elastic-fluentd-kibana.yaml
 
 kubectl create -f elastic-fluentd-kibana.yaml
 
-
-
+```
 
