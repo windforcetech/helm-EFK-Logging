@@ -17,8 +17,11 @@ helm install fluentd
 helm install elasticsearch
 helm install kibana
 
-```
-To setup EFK Stack from single YAML File  elastic-fluentd-kibana.yaml
+## Elasticsearch, Fluentd, and Kibana
+
+To setup EFK Stack from single YAML File  
+i.e. elastic-fluentd-kibana.yaml
+
 kubectl create -f elastic-fluentd-kibana.yaml
 
 
