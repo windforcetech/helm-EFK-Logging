@@ -18,7 +18,9 @@ helm install elasticsearch
 helm install kibana
 
 ```
+To setup EFK Stack from single YAML File  elastic-fluentd-kibana.yaml
+kubectl create -f elastic-fluentd-kibana.yaml
 
-Its done :)
+
 
 
