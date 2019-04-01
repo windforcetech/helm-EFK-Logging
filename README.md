@@ -21,16 +21,18 @@ helm install kibana
 ```
 ## Elasticsearch, Fluentd, and Kibana
 
+```
 To setup EFK Stack from single YAML File  
 i.e. elastic-fluentd-kibana.yaml
 
 kubectl create -f elastic-fluentd-kibana.yaml
+```
 
-
-Monitoring Set-up using helm charts
+## Monitoring Set-up using helm charts
 
 
 helm install grafana
+
 ```
 NOTES:
 1. Get your 'admin' user password by running:
