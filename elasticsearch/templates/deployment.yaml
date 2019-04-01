@@ -1,6 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
+  namespace: logging
   labels:
     app: {{ template "elasticsearch.name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -42,3 +43,4 @@ spec:
     {{- end }}
       tolerations:
 {{ toYaml .Values.tolerations | indent 8 }}
+

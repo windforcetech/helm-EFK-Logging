@@ -1,6 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
+  namespace: logging
   labels:
     app: {{ template "kibana.name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -24,9 +25,11 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-        {{- range $key, $value := .Values.env }}
-        - name: "{{ $key }}"
-          value: "{{ $value }}"
+        {{- range $key, $value := .Values.env }}    
+        - name: ELASTICSEARCH_URL
+          value: http://elasticsearch-logging:9200
+        - name: SERVER_BASEPATH
+          value: /api/v1/namespaces/logging/services/kibana-logging/proxy  
         {{- end }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}

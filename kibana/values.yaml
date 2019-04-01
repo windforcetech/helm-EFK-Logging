@@ -16,7 +16,7 @@ env:
   # SERVER_DEFAULTROUTE: "/app/kibana"
 
 service:
-  type: NodePort
+  type: LoadBalancer
   externalPort: 5601
   internalPort: 5601
 
