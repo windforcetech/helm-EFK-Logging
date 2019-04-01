@@ -60,4 +60,4 @@ Get the Prometheus server URL by running these commands in the same shell:
 ```
 
 helm install metric-server
- ```
+
