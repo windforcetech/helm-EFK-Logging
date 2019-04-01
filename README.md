@@ -27,3 +27,10 @@ i.e. elastic-fluentd-kibana.yaml
 kubectl create -f elastic-fluentd-kibana.yaml
 
 
+Monitoring Set-up using helm charts
+
+```
+helm install grafana
+helm install prometheus
+helm install metric-server
+ ```
