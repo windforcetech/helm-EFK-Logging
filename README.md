@@ -26,5 +26,4 @@ i.e. elastic-fluentd-kibana.yaml
 
 kubectl create -f elastic-fluentd-kibana.yaml
 
-```
 
